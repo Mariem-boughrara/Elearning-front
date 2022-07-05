@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" style="color:white;">All Courses</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+
+     <form class="form-inline my-2 my-lg-0">
+        <input type="search" (ngModelChange)="searchCourse(key.value)" #key="ngModel" ngModel
+         name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search Courses..." required>
+     </form>
+  </div>
+</nav>
+<div class="container" id="main-container">
+<div class="row">
+  <div *ngFor="let cour of cours" class="col-md-6 col-xl-3">
+     <div class="card m-b-30">
+        <div class="card-body row">
+
+           <div class="col-6 card-title align-self-center mb-0">
+              <h5>{{cour?.titre}}</h5>
+
+           </div>
+        </div>
+
+
+     </div>
+  </div>
+</div>
+
+<!-- Notification for no Courses -->
+<div *ngIf="cours?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">NO Courses!</h4>
+    <p>No Courses were found.</p>
+  </div>
+  </div>

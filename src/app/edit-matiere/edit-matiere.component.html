@@ -1,0 +1,21 @@
+<form #editForm="ngForm" (ngSubmit)="onEditMatiere()">
+  <div class="form-group">
+    <label for="nom">Id</label>
+    <input type="text" [(ngModel)]="matiere.id" [ngModelOptions]="{standalone:true}"  name="matiere_id" class="form-control" id="matiere_id" placeholder="Id" >
+ </div>
+  <div class="form-group">
+     <label for="nom">Titre</label>
+     <input type="text" [(ngModel)]="matiere.titre" [ngModelOptions]="{standalone:true}"  name="matiere_titre" class="form-control" id="matiere_titre" placeholder="Titre" required>
+  </div>
+
+  <div class="form-group">
+
+     <div class="modal-footer">
+     <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+    <button  class="btn btn-primary" >Save changes</button>
+</div>
+  </div>
+
+
+  </form>
+

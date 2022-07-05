@@ -1,0 +1,29 @@
+<form #editForm="ngForm" (ngSubmit)="onEditUser()">
+  <div class="form-group">
+    <label for="nom">Id</label>
+    <input type="text" [(ngModel)]="user.id" [ngModelOptions]="{standalone:true}"  name="user_id" class="form-control" id="user_id" placeholder="Id" >
+ </div>
+  <div class="form-group">
+     <label for="nom">Last Name</label>
+     <input type="text" [(ngModel)]="user.nom" [ngModelOptions]="{standalone:true}"  name="user_nom" class="form-control" id="user_nom" placeholder="Last Name" >
+  </div>
+  <div class="form-group">
+     <label for="prenom">First Name</label>
+     <input type="text" [(ngModel)]="user.prenom" [ngModelOptions]="{standalone:true}"  name="user_prennom" class="form-control" id="user_prenom" placeholder="First Name" required>
+  </div>
+  <div class="form-group">
+     <label for="Email">Email</label>
+     <input type="email" [(ngModel)]="user.email" [ngModelOptions]="{standalone:true}"  name="user_email" class="form-control" id="user_email" placeholder="Email" required>
+  </div>
+  <div class="form-group">
+     <label for="password">Password</label>
+     <input type="password" [(ngModel)]="user.pass" [ngModelOptions]="{standalone:true}"  name="user_pass" class="form-control" id="user_pass" placeholder="Password" required>
+     <div class="modal-footer">
+     <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+    <button  class="btn btn-primary" >Save changes</button>
+</div>
+  </div>
+
+
+  </form>
+

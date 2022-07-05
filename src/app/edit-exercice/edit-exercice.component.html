@@ -1,0 +1,19 @@
+<form #editForm="ngForm" (ngSubmit)="onEditExercice()">
+  <div class="form-group">
+    <label for="nom">Id</label>
+    <input type="text" [(ngModel)]="exercice.id" [ngModelOptions]="{standalone:true}"  name="exercice_id" class="form-control" id="exercice_id" placeholder="Id" >
+ </div>
+ <div class="form-group">
+  <label for="nom">Title</label>
+  <input type="text" [(ngModel)]="exercice.titre" [ngModelOptions]="{standalone:true}"  name="exercice_titre" class="form-control" id="exercice_titre" placeholder="Title" >
+</div>
+
+     <div class="modal-footer">
+     <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
+    <button  class="btn btn-primary" >Save changes</button>
+</div>
+
+
+
+  </form>
+
